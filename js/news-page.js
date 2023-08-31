@@ -8,7 +8,7 @@ const handleCategory = async () => {
   allData.forEach((category) => {
     const div = document.createElement("div");
     div.innerHTML = `
-            <a onclick="loadNews('${category.category_id}')" class="tab text-lg font-bold text-black hover:text-gray-700 ">${category.category_name}</a> 
+            <a onclick="loadNews('${category.category_id}')" class="tab text-lg font-bold text-black active:text-red-500 relative before hover:text-gray-700 ">${category.category_name}</a> 
             `;
     tabContainer.appendChild(div);
   });
@@ -121,6 +121,6 @@ const handleModal = async(newsId) => {
 
 
 handleCategory();
-loadNews('01');
+loadNews('02');
 
 
